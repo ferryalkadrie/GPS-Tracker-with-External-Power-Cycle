@@ -20,6 +20,17 @@
 A modular low-power GPS tracking system featuring an external hardware power-cycle controller for maximum reliability and extended battery life.
 
 </p>
+## 📷 Prototype
+
+<p align="center">
+  <img src="images/prototype.jpg" width="700">
+</p>
+
+**Prototype Version 1**
+
+ESP32 + ESP-01 + SIM800L + GPS Neo-6M + AO3400 MOSFET
+
+Prototype of the complete hardware integration featuring an external power-cycle controller for long-term autonomous GPS tracking.
 
 ---
 

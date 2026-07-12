@@ -1,3 +1,26 @@
+# 📡 GPS Tracker with External Power Cycle (Community Edition)
+
+A self-recovering, low-power GPS tracking system utilizing an ESP32 architecture combined with hardware-level failsafe recovery mechanisms.
+
+<!-- 🚀 DISISIPKAN DI SINI (Tepat di bawah judul/deskripsi utama) -->
+## 🌊 Real-World Marine Deployment (S2 Academic Research)
+This system was successfully trusted and deployed as the core tracking hardware for a Master's Degree (S2) academic research project. 
+
+- **Operational Environment:** Open sea and river estuaries (Muara Laut).
+- **Power Constraints:** Powered solely by a single 18650 Li-ion battery.
+- **Performance Metrics:** Exceeded the target benchmark of **24+ hours of continuous tracking** in harsh marine environments.
+- **Success Criteria:** Successfully maintained low-power cycles and reliably transmitted localized telemetry data back to the server upon reaching the estuary network coverage.
+
+---
+
+## 🛠️ Core Features
+- **Dual-MCU Hardware Failsafe:** External hardware-level power recycling to prevent system lockups in remote areas.
+- **Advanced Deep Sleep:** Optimized for extreme battery longevity on a single cell.
+- **Robust Telemetry:** Built-in re-connection logic for cellular data networks.
+
+## 💎 Production Edition
+This repository contains the *Community Edition*. For full commercial features, including multi-sensor arrays, cellular roaming stability enhancements, and industrial housing schematics, please contact the author.
+
 # 🚀 ESP32 Low-Power GPS Tracker
 
 <p align="center">

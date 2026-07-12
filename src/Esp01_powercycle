@@ -1,0 +1,42 @@
+/*
+  ===================================================================
+  ESP-01 Power Cycle Controller (Community Edition)
+  ===================================================================
+  Description:
+  Independent hardware timer controller for low-power automation.
+  Flashes a low signal to the MOSFET gate to initiate a hard reset.
+  
+  Hardware Requirements:
+  - Physical jumper from Pin 8 (XPD/GPIO16) to RST pin for wakeup trigger.
+  - GPIO2 connected to the Gate of the AO3400 N-Channel MOSFET.
+  ===================================================================
+*/
+
+// Hardware Pin Assignment
+const int CONTROL_PIN = 2;
+
+// Deep Sleep Duration (Microseconds)
+// Formula: Minutes * 60 seconds * 1,000,000 us
+const uint64_t DEEP_SLEEP_TIME_US = 150 * 60 * 1000000ULL; 
+
+void setup() {
+  // All operational logic is executed within setup() upon hardware reset
+  pinMode(CONTROL_PIN, OUTPUT);
+
+  // 1. Ensure the main controller is initialized HIGH
+  digitalWrite(CONTROL_PIN, HIGH);
+
+  // 2. Initiate power cycle sequence (LOW signal to AO3400 Gate)
+  digitalWrite(CONTROL_PIN, LOW);
+  delay(3000); // 3-second hardware cut-off duration
+
+  // 3. Restore power supply to the main controller
+  digitalWrite(CONTROL_PIN, HIGH);
+
+  // 4. Enter hardware Deep Sleep mode
+  ESP.deepSleep(DEEP_SLEEP_TIME_US);
+}
+
+void loop() {
+  // Loop execution is handled by hardware reset on wakeup
+}

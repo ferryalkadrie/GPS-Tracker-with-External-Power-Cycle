@@ -88,8 +88,8 @@ The result is:
 - 💤 ESP32 Deep Sleep
 - 🤖 ESP-01 Hardware Watchdog
 - 🔄 Automatic System Recovery
-- 🌐 HTTP Data Upload
-- 📡 MQTT Ready
+- 🌐 thinghttp telegram bot 
+- 📡 thingspeak Ready
 - 💾 EEPROM Data Storage
 - 🔧 Modular Source Code
 - 📱 Remote Monitoring
